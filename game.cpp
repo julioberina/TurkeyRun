@@ -1,7 +1,18 @@
 #include "game.h"
 #include <SFML/Graphics.hpp>
+using namespace sf;
 
-Game::Game() : window(VideoMode(800, 600), "Turkey Run")
+// private method implementations
+
+void Game::drawGameObjectsTo(RenderWindow& window)
+{
+  basket.drawTo(window);
+}
+
+// public method implementations
+
+Game::Game() : window(VideoMode(800, 600), "Turkey Run"),
+	       basket()
 {
   
 }
@@ -19,6 +30,7 @@ void Game::play()
 	}
 
       window.clear();
+      drawGameObjectsTo(window);
       window.display();
     }
 }
