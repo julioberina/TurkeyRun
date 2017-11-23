@@ -19,6 +19,8 @@ class GamePoints
   GamePoints();
   void drawTo(RenderWindow& window);
   void setFont(const Font& font);
+  void incTotal(int pt = 1);
+  void incMissed(int pt = 1);
 };
 
 #endif

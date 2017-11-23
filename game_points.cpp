@@ -35,3 +35,15 @@ void GamePoints::setFont(const Font& font)
   missedText.setFont(font);
   setTextAttributes();
 }
+
+void GamePoints::incTotal(int pt)
+{
+  totalPoints += pt;
+  totalText.setString("Total: " + std::to_string(totalPoints));
+}
+
+void GamePoints::incMissed(int pt)
+{
+  missedPoints += pt;
+  missedText.setString("Missed: " + std::to_string(missedPoints));
+}
