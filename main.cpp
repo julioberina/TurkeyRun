@@ -1,8 +1,8 @@
-#include <iostream>
-using namespace std;
+#include "game.h"
 
 int main()
 {
-  cout << "Game coming soon..." << endl;
+  Game game;
+  game.play();
   return 0;
 }
