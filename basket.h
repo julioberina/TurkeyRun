@@ -11,6 +11,7 @@ class Basket
  public:
   Basket();
   void drawTo(RenderWindow& window);
+  void followMouse(int mouseX);
 };
 
 #endif

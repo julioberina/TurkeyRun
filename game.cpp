@@ -31,6 +31,8 @@ void Game::play()
 	{
 	  if (event.type == Event::Closed)
 	    window.close();
+	  else if (event.type == Event::MouseMoved)
+	    basket.followMouse(event.mouseMove.x);
 	}
 
       window.clear();
